@@ -210,11 +210,11 @@ function buddyforms_acf_frontend_form_elements( $form, $form_args ) {
 			if ( post_type_exists( 'acf-field-group' ) ) {
 				// Create the BuddyForms Form Element Structure
 				$form->addElement( new Element_HTML( '
-                          <div id="acf-' . $field['name'] . '" class="bf_field_group acf-field acf-field-' . $field_type . ' acf-field' . $field['key'] . $required_class . '" data-name="' . $field['name'] . '" data-key="' . $field['key'] . '" data-type="' . $field_type . '"><label for="' . $field['name'] . '">' ) );
+                          <div id="acf-' . $field['name'] . '" class="bf_field_group acf-field acf-field-' . $field_type . ' acf-field' . $field['key'] . $required_class . '" data-name="' . $field['name'] . '" data-key="' . $field['key'] . '" data-type="' . $field_type . '"><label for="' . $field['name'] . '">' .$field['label'] ) );
 			} else {
 				// Create the BuddyForms Form Element Structure
 				$form->addElement( new Element_HTML( '
-                          <div id="acf-' . $field['name'] . '" class="bf_field_group field field_type-' . $field_type . ' field_key-' . $field['key'] . $required_class . '" data-field_name="' . $field['name'] . '" data-field_key="' . $field['key'] . '" data-field_type="' . $field_type . '"><label for="' . $field['name'] . '">' ) );
+                          <div id="acf-' . $field['name'] . '" class="bf_field_group field field_type-' . $field_type . ' field_key-' . $field['key'] . $required_class . '" data-field_name="' . $field['name'] . '" data-field_key="' . $field['key'] . '" data-field_type="' . $field_type . '"><label for="' . $field['name'] . '">' .$field['label'] ) );
 			}
 
 			if ( $field['required'] ) {
@@ -283,11 +283,11 @@ function buddyforms_acf_frontend_form_elements( $form, $form_args ) {
 				if ( post_type_exists( 'acf-field-group' ) ) {
 					// Create the BuddyForms Form Element Structure
 					$form->addElement( new Element_HTML( '
-                          <div id="acf-' . $field['name'] . '" class="bf_field_group acf-field acf-field-' . $field['type'] . ' acf-field' . $field['key'] . $required_class . '" data-name="' . $field['name'] . '" data-key="' . $field['key'] . '" data-type="' . $field['type'] . '"><label for="' . $field['name'] . '">' ) );
+                          <div id="acf-' . $field['name'] . '" class="bf_field_group acf-field acf-field-' . $field['type'] . ' acf-field' . $field['key'] . $required_class . '" data-name="' . $field['name'] . '" data-key="' . $field['key'] . '" data-type="' . $field['type'] . '"><label for="' . $field['name'] . '">' .$field['label'] ) );
 				} else {
 					// Create the BuddyForms Form Element Structure
 					$form->addElement( new Element_HTML( '
-                          <div id="acf-' . $field['name'] . '" class="bf_field_group field field_type-' . $field['type'] . ' field_key-' . $field['key'] . $required_class . '" data-field_name="' . $field['name'] . '" data-field_key="' . $field['key'] . '" data-field_type="' . $field['type'] . '"><label for="' . $field['name'] . '">' ) );
+                          <div id="acf-' . $field['name'] . '" class="bf_field_group field field_type-' . $field['type'] . ' field_key-' . $field['key'] . $required_class . '" data-field_name="' . $field['name'] . '" data-field_key="' . $field['key'] . '" data-field_type="' . $field['type'] . '"><label for="' . $field['name'] . '">' .$field['label'] ) );
 				}
 
 				if ( $field['required'] ) {
